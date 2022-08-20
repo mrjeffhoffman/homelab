@@ -129,6 +129,7 @@
 				</header>
 				<div class="content dark style3">
 					<div class="container">
+					<!--- Change header photo --->
 						<span class="image featured"><img src="images/installed.jpg" alt="" /></span>
 						<div class="row">
 							<div class="col-4 col-12-narrow">
@@ -142,26 +143,28 @@
 								<pre><code>su - <user></code></pre>
 								I can now use sudo to run code with root access.
 								</p>
-								
-							</div>
-							<div class="col-4 col-12-narrow">
 								<p>Docker was really interesting to me as a tool where I can spin up mini virtual machines inside my virtual machines.
 								It is basically a containerized VM that uses the host machine's kernel and resources instead of needing its own. I installed
 								docker and got started on trying to self-host services with it. When you start a container with docker, you can choose to expose
 								a port with a -p flag. Then you can use those ports to access your self-hosted services.
 								</p>
+								
+							</div>
+							<div class="col-4 col-12-narrow">
+								
 								<p>As a beginner to self-hosted services, I didn't want to expose a bunch of ports through my router firewall, so I started with Nginx.
 								Nginx is a web server that can be configured to route traffic through one publicly exposed port to other ports on a local network, without
 								exposing the ips and ports directly. So far, I have been able to reach the Nginx web server, however, I haven't been sucessful
 								configuring it to route to other services. My solution at this time is to use <a href="https://nginxproxymanager.com/">Nginx Proxy Manager</a>.
 								</p>
-							</div>
-							<div class="col-4 col-12-narrow">
 								<p>Nginx Proxy Manager provides a UI for directing traffic through your Nginx proxy. I was able to set it up with docker-compose
 								(a tool for building custom docker images) and connect pretty easily. As an extra layer of protection I decided to use Cloudflare to
 								route public traffic to my network. Using Cloudflare Tunnels and a free domain name from freenom I can route to my Nginx Proxy Manager
 								dashboard through the public internet by going to https://npm.mrjeffhoffman.tk.
 								</p>
+							</div>
+							<div class="col-4 col-12-narrow">
+								
 								<p>I was pretty pleased that I was able to get this all set up and access my home network from the public internet. I can't wait to add
 								services for myself and give access to my friends and family. I will add more updates here as I finish projects. First, I will set up
 								a Don't Starve Together gaming server using docker and route UDP connections through Cloudflare and Nginx for me and friends to play together!
