@@ -12,7 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link href="themes/prism.css" rel="stylesheet" />
 	</head>
-	<body class="is-preload">
+	<body class="is-preload language-bash">
 
 		<!-- Header -->
 			<section id="header" class="dark">
@@ -136,8 +136,8 @@
 								<h3>Exploring PhotonOS (Aug 20, 2022)</h3>
 								<p>The first distribution I loaded into a virtual machine was <a href="https://github.com/vmware/photon">PhotonOS</a>.
 								It was super easy to install and start creating new users. I created a new sudo user with
-								<pre><code>useradd user</code></pre>
-								<pre><code>useradd <user></code></pre>
+								<pre><code class="language-bash">useradd user</code></pre>
+								<pre><code >useradd <user></code></pre>
 								<pre><code>usermod -aG sudo <user></code></pre>
 								and then switched to the new user with
 								<pre><code>su - <user></code></pre>
